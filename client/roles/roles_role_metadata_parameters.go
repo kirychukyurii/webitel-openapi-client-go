@@ -110,7 +110,7 @@ type RolesRoleMetadataParams struct {
 
 	   Represents a structured value.
 	*/
-	MergeStructValue *object
+	MergeStructValue *string
 
 	timeout    time.Duration
 	Context    context.Context
@@ -243,13 +243,13 @@ func (o *RolesRoleMetadataParams) SetMergeStringValue(mergeStringValue *string) 
 }
 
 // WithMergeStructValue adds the mergeStructValue to the roles role metadata params
-func (o *RolesRoleMetadataParams) WithMergeStructValue(mergeStructValue *object) *RolesRoleMetadataParams {
+func (o *RolesRoleMetadataParams) WithMergeStructValue(mergeStructValue *string) *RolesRoleMetadataParams {
 	o.SetMergeStructValue(mergeStructValue)
 	return o
 }
 
 // SetMergeStructValue adds the mergeStructValue to the roles role metadata params
-func (o *RolesRoleMetadataParams) SetMergeStructValue(mergeStructValue *object) {
+func (o *RolesRoleMetadataParams) SetMergeStructValue(mergeStructValue *string) {
 	o.MergeStructValue = mergeStructValue
 }
 
@@ -366,7 +366,7 @@ func (o *RolesRoleMetadataParams) WriteToRequest(r runtime.ClientRequest, reg st
 	if o.MergeStructValue != nil {
 
 		// query param merge.struct_value
-		var qrMergeStructValue object
+		var qrMergeStructValue string
 
 		if o.MergeStructValue != nil {
 			qrMergeStructValue = *o.MergeStructValue
