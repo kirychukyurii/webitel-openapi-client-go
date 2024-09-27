@@ -19,7 +19,7 @@ pull-schema:
 generate-client: ${SWAGGER} pull-schema
 	rm -rf ./models ./client
 
-	~/go/bin/swagger generate client \
+	go run github.com/go-swagger/go-swagger/cmd/swagger@latest generate client \
 	-f scripts/schema.json \
 	--skip-validation \
 	--with-flatten=remove-unused \
