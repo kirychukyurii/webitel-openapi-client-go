@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+permissions:
+  security-events: write
+
 jobs:
   check-drift:
     name: Check generated code
