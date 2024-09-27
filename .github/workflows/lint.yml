@@ -26,7 +26,7 @@ jobs:
         run: go generate
 
       - name: Check diff
-        run: if [[ -n $(git status --porcelain) ]]; then echo "Please update the client using `make generate-client`"; exit 1; fi
+        run: if [[ -n $(git status --porcelain) ]]; then echo "Please update the client using make generate-client"; exit 1; fi
 
   lint:
     name: Linting
