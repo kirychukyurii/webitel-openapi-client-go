@@ -23,7 +23,7 @@ jobs:
           go-version-file: go.mod
 
       - name: Generate client
-        run: go generate
+        run: make generate-client
 
       - name: Check diff
         run: if [[ -n $(git status --porcelain) ]]; then echo "Please update the client using make generate-client"; exit 1; fi
